@@ -1,0 +1,79 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.25.2.0
+Copyright (C) 2018 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: SADF Administrator, ASDF, LIC=YA39H-WNKHZ-30JNC-7TB27-BFK88-H2IFC
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.25.2.0
+Toolchain Path:  D:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 6 (build 750)
+Assembler:       Armasm.exe V5.06 update 6 (build 750)
+Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
+Library Manager: ArmAr.exe V5.06 update 6 (build 750)
+Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+CPU DLL:         SARMCM3.DLL V5.25.2.0
+Dialog DLL:      DARMCM1.DLL V1.19.1.0
+Target DLL:      CMSIS_AGDI.dll V1.29.10.0
+Dialog DLL:      TARMCM1.DLL V1.14.0.0
+ 
+<h2>Project:</h2>
+F:\2020年开发文件\报警器CAT模块试验\TEST10\ALARM_CAT_LOR\MDK-ARM\ALARM_CAT_LOR.uvprojx
+Project File Date:  12/02/2022
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'D:\Keil_v5\ARM\ARMCC\Bin'
+Build target 'ALARM_CAT_LOR'
+compiling lte_demo.c...
+ALARM_CAT_LOR\lte_demo.c(351): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+  		    sprintf(EC600uinit.upIMEI,"AT+QMTCONN=0,\"%s\",\"device\",\"123456\"\r\n",EC600uinit.IMEI);// \"\" 就是表示双引号，s%表示占位符,12345678是密码  debice是用户名
+ALARM_CAT_LOR\lte_demo.c(352): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+          if (fat_send_wait_cmdres_blocking(EC600uinit.upIMEI, 500))
+ALARM_CAT_LOR\lte_demo.c(373): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+  		sprintf(EC600uinit.upIMEI,"AT+QMTSUB=0,1,\"%s\",0\r\n",EC600uinit.subtopic);//订阅主题    
+ALARM_CAT_LOR\lte_demo.c(374): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+  		if (fat_send_wait_cmdres_blocking(EC600uinit.upIMEI, 500))
+ALARM_CAT_LOR\lte_demo.c(506): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
+              data_len = strlen(sand_dat_c);
+ALARM_CAT_LOR\lte_demo.c(533): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "char *"
+          if (fat_send_wait_cmdres_nonblocking_hex(sand_dat_c,4,1000))
+ALARM_CAT_LOR\lte_demo.c(480): warning:  #550-D: variable "data_len"  was set but never used
+      uint8_t data_len;//发送数据的长度，定长发送需要知道数据长度
+ALARM_CAT_LOR\lte_demo.c(481): warning:  #177-D: variable "sand_dat_int"  was declared but never referenced
+      static uint8_t sand_dat_int[10]={"helloo"};
+ALARM_CAT_LOR\lte_demo.c(483): warning:  #177-D: variable "wei_ling"  was declared but never referenced
+      static uint8_t wei_ling[4]="he";
+ALARM_CAT_LOR\lte_demo.c: 9 warnings, 0 errors
+linking...
+Program Size: Code=15612 RO-data=472 RW-data=64 ZI-data=1744  
+FromELF: creating hex file...
+"ALARM_CAT_LOR\ALARM_CAT_LOR.axf" - 0 Error(s), 9 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.3.0.pack
+                ARM.CMSIS.5.3.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.1.1
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32G0xx_DFP.1.2.0.pack
+                Keil.STM32G0xx_DFP.1.2.0
+                STMicroelectronics STM32G0 Series Device Support
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_ALARM_CAT_LOR
+  D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include
+  D:\Keil_v5\ARM\PACK\Keil\STM32G0xx_DFP\1.2.0\Drivers\CMSIS\Device\ST\STM32G0xx\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.1.1
+Build Time Elapsed:  00:00:03
+</pre>
+</body>
+</html>
