@@ -1,0 +1,1 @@
+stm32g070dmac\startup_stm32g070xx.o: startup_stm32g070xx.s
